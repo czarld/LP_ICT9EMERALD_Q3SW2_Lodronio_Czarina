@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q3 Seatwork 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+        <div class="container-fluid">
+
+        
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynavbar">
+
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_self"> SHOP </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_self"> LOCATE </a>
+                    </li>
+
+                </ul>
+
+
+                <form class="d-flex">
+                    <input class="form-control" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button"> Search 
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <style>
+        body {
+            background-color: #2064a8;
+        }
+        .result-box {
+            background-color: #a7bde7;
+            border: 5px solid #ced4da;
+            padding: 15px;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+
+
+    <div class="mb-3">
+        <label style="color: rgb(25, 24, 24); background-color: #7ea6f0 ; text-align: center; font-size:30px;"> Do you want a gaming Laptop? Enter your budget to find the right one for you!</label>
+        <br>
+        <br>
+        <input type="number" id="budgetInput" class="form-control" placeholder="Enter amount">
+    </div>
+
+
+    <button class="btn btn-primary mb-3" onclick="calculateBudget()">Submit</button>
+
+    <h2 style="background-color: #7ea6f0; border-style:ridge;" >Result</h2>
+    <div id="result" class="result-box">
+        Result will appear here.
+    </div>
+
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h2 style="background-color: #7ea6f0; border-style:ridge">Brands</h2>
+            <ul style="background-color: #b7ccf4;">
+                <li>Asus</li>
+                <li>Acer</li>
+                <li>Apple</li>
+                <li>Lenovo</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <h2 style="background-color: #7ea6f0; border-style:ridge">Store Locations</h2>
+            <ul style="background-color: #b7ccf4;">
+                <li>SM Mall of Asia</li>
+                <li>Ayala Malls</li>
+                <li>Robinsons Place</li>
+                <li>Online Store</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>
+
+<script>
+
+    function calculateBudget() {
+        let budget = document.getElementById("budgetInput").value;
+        let result = budget * "0.20";
+        document.getElementById("result").innerHTML =
+            "You are eligible for: ₱" + result;
+    }
+</script>
+
+</body>
+</html>
